@@ -1,0 +1,47 @@
+:root {
+  --white: #FFF;
+  --black: #000;
+  --input-color: #55595c;
+  --input-border-focus: #E9573F;
+}
+
+.formControl {
+  display: block;
+  width: 100%;
+  padding: 8px 4px;
+  font-size: 24px;
+  line-height: 1.2;
+  color: var(--input-color);
+  background-color: var(--white);
+  background-image: none;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid color(var(--black) a(0.1));
+  border-radius: 0;
+  transition: 0.2s all ease-in-out;
+}
+
+.formControl::placeholder {
+  font-weight: 300;
+  color: #CCD1D9;
+}
+
+.formControl:focus,
+.formControl:active {
+  outline: none;
+  box-shadow: none;
+  border-color: var(--input-border-focus);
+}
+
+.formGroup {
+  clear: fix;
+  margin: 0 0 16px 0;
+}
+
+.controlLabel {
+  margin: 16px 0;
+  padding: 0 6px;
+}

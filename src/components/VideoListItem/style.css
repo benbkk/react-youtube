@@ -1,0 +1,29 @@
+.videoListItem {
+  padding: 8px 0;
+  border-top: 1px solid gray(96%);
+  cursor: pointer;
+}
+
+.videoListItem:first-child {
+  padding-top: 0;
+  border-top: none;
+}
+
+.videoListMedia {
+  margin-bottom: 0;
+}
+
+.mediaObject {
+  margin-right: 10px;
+}
+
+.videoDetail {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: calc(100% - 140px);
+}
+
+.videoDetail h3 {
+  font-size: 16px;
+  margin: 0;
+}

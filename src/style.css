@@ -1,0 +1,301 @@
+/* Reboot */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+* {
+  -ms-viewport { width: device-width; }
+}
+
+:root {
+  --body-color: #AAB2BD;
+  --heading-color: #656D78;
+  --body-bg: #FFF;
+  --base-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --base-font-size: 16px;
+  --base-line: 1.5;
+  --font-weight-base: 400;
+  --font-weight-bold: 700;
+  --link-color: #3498db;
+  --link-hover-color: #2980b9;
+  --link-hover-decoration: underline;
+}
+
+html {
+  font-size: var(--base-font-size);
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body {
+  font-family: var(--base-family);
+  font-size: var(--base-font-size);
+  line-height: var(--base-line);
+  color: var(--body-color);
+  background-color: var(--body-bg);
+  margin: 0;
+  padding: 0;
+}
+
+[tabindex="-1"]:focus {
+  outline: none !important;
+}
+
+h1 {
+  font-size: 44px;
+}
+
+h1 {
+  margin: 0 0 24px 0;
+}
+
+h1, h2, h3 {
+  line-height: 1.25;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--font-weight-base);
+  color: var(--heading-color);
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+abbr[title],
+abbr[data-original-title] {
+  cursor: help;
+  border-bottom: 1px dotted gray(50%);
+}
+
+address {
+  margin-bottom: 16px;
+  font-style: normal;
+  line-height: var(--base-line);
+}
+
+ol,
+ul,
+dl {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-bottom: 0;
+}
+
+dt {
+  font-weight: var(--font-weight-bold);
+}
+
+dd {
+  margin-bottom: 8px;
+  margin-left: 0;
+}
+
+blockquote {
+  margin: 0 0 16px;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    outline: none;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--link-hover-color);
+    text-decoration: var(--link-hover-decoration);
+  }
+}
+
+a:not([href]):not([tabindex]) {
+  color: inherit;
+  text-decoration: none;
+
+  @include hover-focus {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+  overflow: auto;
+}
+
+figure {
+  margin: 0 0 16px;
+}
+
+img {
+  vertical-align: middle;
+}
+
+[role="button"] {
+  cursor: pointer;
+}
+
+a,
+area,
+button,
+[role="button"],
+input,
+label,
+select,
+summary,
+textarea {
+  touch-action: manipulation;
+}
+
+table {
+  border-collapse: collapse;
+  background-color: var(--body-bg);
+}
+
+caption {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: gray(60%);
+  text-align: left;
+  caption-side: bottom;
+}
+
+th {
+  text-align: left;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+button:focus {
+  outline: none;
+}
+
+input,
+button,
+select,
+textarea {
+  line-height: inherit;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  &:disabled {
+    cursor: default;
+  }
+}
+
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"] {
+  -webkit-appearance: listbox;
+}
+
+textarea {
+  resize: vertical;
+}
+
+fieldset {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 8px;
+  font-size: 12px;
+  line-height: inherit;
+}
+
+input[type="search"] {
+  -webkit-appearance: none;
+}
+
+output {
+  display: inline-block;
+  font-size: var(--base-family);
+  line-height: var(--base-line);
+  color: var(--body-color);
+}
+
+[hidden] {
+  display: none !important;
+}
+
+html,
+body {
+  height: 100%;
+  position: relative;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+@media (width >= 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (width <= 992px) and (width < 1200px) {
+  .container {
+    max-width: 992px;
+  }
+}
+
+@media (width <= 768px) and (width < 992px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (width >= 554px) and (width < 768px) {
+  .container {
+    max-width: 576px;
+  }
+}
+
+.container:first-of-type {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.mainContent {
+  clear: fix;
+}
+
+.h1XL {
+  font-size: 64px;
+}
