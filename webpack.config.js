@@ -6,6 +6,7 @@ const postcssUrl = require('postcss-url')
 const postcssBrowserReporter = require('postcss-browser-reporter')
 const postcssReporter = require('postcss-reporter')
 const postcssPxtorem = require('postcss-pxtorem')
+const postcssFontSmoothing = require('postcss-font-smoothing')
 const rucksackCss = require('rucksack-css')
 const lostGrid = require('lost')
 
@@ -48,6 +49,7 @@ module.exports = {
       postcssPxtorem(),
       postcssBrowserReporter(),
       postcssReporter(),
+      postcssFontSmoothing(),
       rucksackCss(),
       lostGrid()
     ];

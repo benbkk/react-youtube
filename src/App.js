@@ -22,6 +22,9 @@ export default class App extends Component {
       // or this.setState({videos: videos})
     })
   }
+  handleVideoSelect = selectedVideo => {
+    this.setState({selectedVideo})
+  }
   render() {
     return(
       <div className={style.container}>
@@ -29,7 +32,10 @@ export default class App extends Component {
         <SearchBar />
         <div className={style.mainContent}>
           <VideoDetail video={this.state.selectedVideo} />
-          <VideoList videos={this.state.videos}/>
+          <VideoList
+            onVideoSelect={this.handleVideoSelect}
+            videos={this.state.videos}
+          />
         </div>
       </div>
     )
