@@ -14,7 +14,7 @@ export default class SearchBar extends Component {
       <div className={style.formGroup}>
         <input
           value={this.state.term}
-          className={style.formControl} onChange={this.onInputChange} placeholder="Type anything" />
+          className={style.formControl} onChange={this.onInputChange} placeholder="Type anything then hit enter to start" />
         <label className={style.controlLabel}>I want to watch {this.state.term}</label>
       </div>
     )

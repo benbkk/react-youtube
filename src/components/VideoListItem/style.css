@@ -1,7 +1,6 @@
 .videoListItem {
   padding: 8px 0;
   border-top: 1px solid gray(96%);
-  cursor: pointer;
 }
 
 .videoListItem:first-child {
@@ -11,10 +10,13 @@
 
 .videoListMedia {
   margin-bottom: 0;
+  cursor: pointer;
 }
 
 .mediaObject {
-  margin-right: 10px;
+  margin-right: 20px;
+  width: 120px;
+  height: 90px;
 }
 
 .videoDetail {
@@ -24,6 +26,17 @@
 }
 
 .videoDetail h3 {
-  font-size: 16px;
+  font-size: 18px;
+  margin: 0px 0 9px 0;
+  cursor: pointer;
+}
+
+.videoDetail p {
+  font-size: 13px;
   margin: 0;
+}
+
+.videoDetail h3:hover,
+.videoDetail h3:active {
+  color: #E9573F;
 }

@@ -1,7 +1,7 @@
 :root {
   --white: #FFF;
   --black: #000;
-  --input-color: #55595c;
+  --input-color: color(#AAB2BD shade(20%));
   --input-border-focus: #E9573F;
 }
 

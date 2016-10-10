@@ -15,7 +15,7 @@ html {
 }
 
 :root {
-  --body-color: #AAB2BD;
+  --body-color: color(#AAB2BD shade(10%));
   --heading-color: #656D78;
   --body-bg: #FFF;
   --base-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -54,6 +54,11 @@ h1 {
 
 h1 {
   margin: 0 0 24px 0;
+}
+
+h2 {
+  font-size: 32px;
+  margin: 32px 0 18px 0;
 }
 
 h1, h2, h3 {
@@ -260,7 +265,19 @@ body {
 
 .container {
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 20px;
+    clear: fix;
+}
+
+.h1XL {
+  lost-column: 2/3;
+  line-height: 1.2;
+}
+
+@media (width <= 628px) {
+  .h1XL {
+    lost-column: 3/3;
+  }
 }
 
 @media (width >= 1200px) {
@@ -288,7 +305,7 @@ body {
 }
 
 .container:first-of-type {
-  padding-top: 48px;
+  padding-top: 88px;
   padding-bottom: 48px;
 }
 
@@ -298,4 +315,8 @@ body {
 
 .h1XL {
   font-size: 64px;
+}
+
+.red {
+  color: #E9573F;
 }
