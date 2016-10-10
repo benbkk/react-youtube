@@ -1,3 +1,4 @@
+import _ from 'lodash'
 import React, { Component } from 'react'
 import YTSearch from 'youtube-api-search'
 import SearchBar from './components/SearchBar'
@@ -19,14 +20,14 @@ export default class App extends Component {
   videoSelect = selectedVideo => {
     this.setState({selectedVideo})
   }
-  videoSearch = term => {
+  videoSearch = _.debounce(term => {
     YTSearch({key: API_KEY, term: term, maxResults: 10}, videos => {
       this.setState({
         videos: videos, // or this.setState({videos: videos})
         selectedVideo: videos[0] // so that there will always be a video shown
       })
     })
-  }
+  }, 300)
   render() {
     return(
       <div className={style.container}>

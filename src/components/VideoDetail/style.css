@@ -15,7 +15,7 @@
 	height: 0;
   display: block;
   overflow: hidden;
-  background: gray(96%);
+  background: #e74c3c;
 }
 
 .videoWrapper iframe {
@@ -35,6 +35,7 @@
 
 .videoCaption h2 {
   margin: 0 0 16px 0;
+  color: #e74c3c;
 }
 
 .videoLoader {
