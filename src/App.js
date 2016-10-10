@@ -14,26 +14,30 @@ export default class App extends Component {
       videos: [],
       selectedVideo: null
     }
-    YTSearch({key: API_KEY, term: 'veep', maxResults: 10}, videos => {
-      this.setState({
-        videos: videos,
-        selectedVideo: videos[0]
-      })
-      // or this.setState({videos: videos})
-    })
+    this.videoSearch('Veep')
   }
-  handleVideoSelect = selectedVideo => {
+  videoSelect = selectedVideo => {
     this.setState({selectedVideo})
+  }
+  videoSearch = term => {
+    YTSearch({key: API_KEY, term: term, maxResults: 10}, videos => {
+      this.setState({
+        videos: videos, // or this.setState({videos: videos})
+        selectedVideo: videos[0] // so that there will always be a video shown
+      })
+    })
   }
   render() {
     return(
       <div className={style.container}>
         <h1 className={style.h1XL}>What would <span className={style.red}>you</span> like to <span className={style.red}>watch</span> today?</h1>
-        <SearchBar />
+
+        <SearchBar onSearchTermChange={this.videoSearch} />
+
         <div className={style.mainContent}>
           <VideoDetail video={this.state.selectedVideo} />
           <VideoList
-            onVideoSelect={this.handleVideoSelect}
+            onVideoSelect={this.videoSelect}
             videos={this.state.videos}
           />
         </div>

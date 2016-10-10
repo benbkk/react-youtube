@@ -1,5 +1,6 @@
 import React from 'react'
 import style from './style.css'
+import classNames from 'classnames'
 
 const VideoListItem = ({video, onVideoSelect}) => {
   const imageUrl = video.snippet.thumbnails.high.url
@@ -16,6 +17,5 @@ const VideoListItem = ({video, onVideoSelect}) => {
     </li>
   )
 }
-
 
 export default VideoListItem

@@ -2,7 +2,7 @@
   --white: #FFF;
   --black: #000;
   --input-color: color(#AAB2BD shade(20%));
-  --input-border-focus: #E9573F;
+  --input-border-focus: #e74c3c;
 }
 
 .formControl {
