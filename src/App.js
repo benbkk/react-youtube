@@ -15,7 +15,7 @@ export default class App extends Component {
       videos: [],
       selectedVideo: null
     }
-    this.videoSearch('Veep')
+    this.videoSearch('')
   }
   videoSelect = selectedVideo => {
     this.setState({selectedVideo})
@@ -31,7 +31,7 @@ export default class App extends Component {
   render() {
     return(
       <div className={style.container}>
-        <h1 className={style.h1XL}>What would <span className={style.red}>you</span> like to <span className={style.red}>watch</span> today?</h1>
+        <h1 className={style.h1XL}>What do <span className={style.red}>you</span> like to <span className={style.red}>watch</span> today?</h1>
 
         <SearchBar onSearchTermChange={this.videoSearch} />
 

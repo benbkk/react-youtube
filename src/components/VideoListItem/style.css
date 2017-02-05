@@ -31,6 +31,11 @@
   font-size: 18px;
   margin: 0px 0 9px 0;
   cursor: pointer;
+  color: color(#e74c3c shade(15%));
+}
+
+.videoDetail:hover h3 {
+  color: #e74c3c;
 }
 
 .videoDetail p {

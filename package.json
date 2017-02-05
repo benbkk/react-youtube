@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "Youtube video player with react",
   "main": "index.js",
-  "repository": "https://github.com/benbkk/react-youtube.git",
+  "repository": {
+    "url": "https://github.com/benbkk/react-youtube.git",
+    "type": "git"
+  },
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server --progress --inline --hot",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
@@ -24,7 +27,7 @@
     "jquery": "^2.2.1",
     "jsdom": "^8.1.0",
     "lost": "^7.1.0",
-    "mocha": "^2.4.5",
+    "mocha": "^3.1.2",
     "postcss": "^5.2.4",
     "postcss-browser-reporter": "^0.5.0",
     "postcss-cli": "^2.6.0",
@@ -36,7 +39,6 @@
     "postcss-reporter": "^1.4.1",
     "postcss-url": "^5.1.2",
     "react-addons-test-utils": "^0.14.7",
-    "react-tweet": "^1.0.22",
     "rucksack-css": "^0.8.6",
     "style-loader": "^0.13.1",
     "webpack": "^1.12.9",
@@ -51,5 +53,6 @@
     "react-router": "^2.0.1",
     "redux": "^3.0.4",
     "youtube-api-search": "0.0.5"
-  }
+  },
+  "license": "MIT"
 }
